@@ -1,0 +1,17 @@
+SELECT COUNT(id), YEAR(`enrolment_date`)
+FROM `students` 
+GROUP BY YEAR(`enrolment_date`)
+
+SELECT COUNT(id), `office_address`
+FROM `teachers` 
+GROUP BY (`office_address`)
+HAVING COUNT(id) > 1
+
+SELECT AVG(`vote`), `exam_id` 
+FROM `exam_student` 
+GROUP BY `exam_id`
+
+SELECT `department_id`, COUNT(id)
+FROM `degrees` 
+GROUP BY `department_id`
+
